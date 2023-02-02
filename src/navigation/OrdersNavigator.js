@@ -1,9 +1,9 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import OrdersScreen from '../screens/OrdersScreen'
 
-const Stack = 
+const Stack = createNativeStackNavigator()
 
-const CartNavigator = () => {
+export default CartNavigator = () => {
   return (
     <Stack.Navigator
     initialRouteName="Categories"
@@ -24,7 +24,3 @@ const CartNavigator = () => {
     </Stack.Navigator>
   )
 }
-
-export default CartNavigator
-
-const styles = StyleSheet.create({})

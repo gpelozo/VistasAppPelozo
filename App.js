@@ -1,17 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
-import {NavigationContainer} from "@react-navigation/native"
-import {useFonts} from "expo-font"
-import ShopNavigator from "./src/navigation/ShopNavigator"
-import {BottomTabNavigator} from './src/navigation/BottomTabNavigator'
+import { useFonts } from "expo-font"
+import { NavigationContainer } from "@react-navigation/native"
+import BottomTabNavigator from "./src/navigation/BottomTabNavigator"
 
-const App = () => {
+export default function App() {
+  const [fontsLoaded] = useFonts({
+    DancingSCript: require("./src/assets/fonts/Dancing_Script/static/DancingScript-Regular.ttf"),
+  })
+
+  if (!fontsLoaded) {
+    return null
+  }
+
   return (
     <NavigationContainer>
-    <BottomTabNavigator/>
+      <BottomTabNavigator />
     </NavigationContainer>
   )
 }
-
-export default App
-
-const styles = StyleSheet.create({})

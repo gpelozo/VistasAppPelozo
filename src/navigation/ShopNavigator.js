@@ -30,14 +30,14 @@ export default ShopNavigator = () => {
           />
           <Stack.Screen
           name="Products"
-          component={CategoriesScreen}
+          component={ProductScreen}
           options={({route}) => ({
             title: route.params.title,
           })}
           />
           <Stack.Screen
           name="Details"
-          component={CategoriesScreen}
+          component={DetailsScreen}
           options={({route}) => ({
             title: route.params.name,
           })}
