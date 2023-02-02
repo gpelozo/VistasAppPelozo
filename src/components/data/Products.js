@@ -1,0 +1,42 @@
+export const PRODUCTS = [
+    {
+        id: "1",
+        category: "1",
+        name: "Pan Baguette",
+        description: "Clasico pan frances",
+        weight: "350gr",
+        price: 16,
+    },
+    {
+        id: "1",
+        category: "1",
+        name: "Pan Baguette",
+        description: "Clasico pan frances",
+        weight: "350gr",
+        price: 16,
+    },
+    {
+        id: "1",
+        category: "1",
+        name: "Pan Baguette",
+        description: "Clasico pan frances",
+        weight: "350gr",
+        price: 16,
+    },
+    {
+        id: "1",
+        category: "1",
+        name: "Pan Baguette",
+        description: "Clasico pan frances",
+        weight: "350gr",
+        price: 16,
+    },
+    {
+        id: "1",
+        category: "1",
+        name: "Pan Baguette",
+        description: "Clasico pan frances",
+        weight: "350gr",
+        price: 16,
+    },
+]
