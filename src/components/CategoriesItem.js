@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: "40%",
     height: "100%",
+    backgroundColor: "green,"
   },
   image: {
     width: "100%",

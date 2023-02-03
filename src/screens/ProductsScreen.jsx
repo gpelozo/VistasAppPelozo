@@ -29,4 +29,15 @@ const ProductsScreen = ({navigation, route}) => {
 
 export default ProductsScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "white",
+    },
+    categoriesContainer: {
+      padding: 15,
+      height: 150,
+    },
+  })

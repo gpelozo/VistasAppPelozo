@@ -1,19 +1,21 @@
 import { useFonts } from "expo-font"
 import { NavigationContainer } from "@react-navigation/native"
 import BottomTabNavigator from "./src/navigation/BottomTabNavigator"
+import ShopNavigator from "./src/navigation/ShopNavigator"
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    DancingSCript: require("./src/assets/fonts/Dancing_Script/static/DancingScript-Regular.ttf"),
+    DancingScript: require("./assets/fonts/DancingScript-Regular.ttf"),
   })
 
   if (!fontsLoaded) {
     return null
   }
 
-  return (
+  return 
     <NavigationContainer>
+      <ShopNavigator/>
       <BottomTabNavigator />
     </NavigationContainer>
-  )
+  
 }

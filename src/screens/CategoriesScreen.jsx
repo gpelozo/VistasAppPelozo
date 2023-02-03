@@ -3,12 +3,12 @@ import React from 'react'
 
 
 
-const renderCategoriesItem = () => {
+const CategoriesScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <FlatList
       data={CATEGORIES}
-      renderItem={renderCategoriesItem}
+      renderItem={CategoriesScreen}
       keyExtractor={item => item.id}
       />
     </View>
