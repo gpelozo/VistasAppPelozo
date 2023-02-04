@@ -16,7 +16,6 @@ export default ShopNavigator = () => {
         initialRouteName="Categories"
         screenOptions={{
           headerStyle: { backgroundColor: COLORS.primary},
-            headerShadowVisible: false,
             headerTintColor: COLORS.secondary,
             headerTitleStyle: {
                 fontWeight: "bold",

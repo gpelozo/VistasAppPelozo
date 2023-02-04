@@ -9,7 +9,7 @@ export const PRODUCTS = [
     },
     {
         id: "2",
-        category: "1",
+        category: "2",
         name: "Pan Ciabatta Blanco",
         description: "Clasico pan frances",
         weight: "800gr",
@@ -17,7 +17,7 @@ export const PRODUCTS = [
     },
     {
         id: "3",
-        category: "2",
+        category: "1",
         name: "Pan Baguette",
         description: "Clasico pan frances",
         weight: "350gr",
@@ -33,7 +33,7 @@ export const PRODUCTS = [
     },
     {
         id: "5",
-        category: "4",
+        category: "2",
         name: "Pan Baguette",
         description: "Clasico pan frances",
         weight: "350gr",
