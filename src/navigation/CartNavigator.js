@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import CartScreen from "../screens/CartScreen"
 
-const CartNavigator = () => {
+const Stack = createNativeStackNavigator()
+
+export default CartNavigator = () => {
   return (
     <Stack.Navigator
     initialRouteName="Categories"
@@ -13,16 +15,12 @@ const CartNavigator = () => {
     }}
     >
     <Stack.Screen
-          name="Categories"
-          component={CategoriesScreen}
+          name="Cart"
+          component={CartScreen}
           options={{
-            title: "Mi Panaderia",
+            title: "Carrito",
           }}
           />
     </Stack.Navigator>
   )
 }
-
-export default CartNavigator
-
-const styles = StyleSheet.create({})

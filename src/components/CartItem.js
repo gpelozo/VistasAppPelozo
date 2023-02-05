@@ -33,10 +33,10 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     detail: {
-        flex:
-        flexDirection:
-        flexWrap:
-        alignItems:
-        justifyContent:
-    }
+        flex: 1,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })

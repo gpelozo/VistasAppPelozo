@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 10,
     elevation: 5,
-    width: '100%',
+    width: "100%",
     height: 130,
   },
   container: {

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet,View, Text } from "react-native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import Ionicons from "@expo/vector-icons/Ionicons"
 
@@ -14,7 +14,7 @@ export default BottomTabNavigator = () => {
             initialRouteName="ShopTab" 
             screenOptions={{
                 headerShown: false,
-                tabBarShowLabel: true,
+                tabBarShowLabel: false,
                 tabBarStyle: styles.tabBar,
             }}
         >
@@ -25,34 +25,36 @@ export default BottomTabNavigator = () => {
                         <Ionicons name="home" size={20} color="black" />
                         <Text>Tienda</Text>
                     </View>
-                )
-            }} />
+                ),
+            }}
+            />
             <BottomTabs.Screen name="CartTab" component={CartNavigator}
             options={{
                 tabBarIcon: () => (
                     <View style={styles.icon}>
-                        <Ionicons name="home" size={20} color="black" />
+                        <Ionicons name="cart" size={20} color="black" />
                         <Text>Carrito</Text>
                     </View>
-                )
-            }} />
-            <BottomTabs.Screen name="CartTab" component={CartNavigator}
+                ),
+            }}
+            />
+            <BottomTabs.Screen name="OrdersTab" component={OrdersNavigator}
             options={{
                 tabBarIcon: () => (
                     <View style={styles.icon}>
-                        <Ionicons name="home" size={20} color="black" />
+                        <Ionicons name="list" size={20} color="black" />
                         <Text>Ordenes</Text>
                     </View>
-                )
-            }} />
-            <BottomTabs.Screen name="CartTab" component={CartNavigator} />
+                ),
+            }}
+            />
         </BottomTabs.Navigator>
     )
 }
 
-const Styles = StyleSheet.create({
+const styles = StyleSheet.create({
     tabBar: {
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: {width: 0, height: 0},
         shadowOpacity: 0.1,
         shadowRadius: 0.5,

@@ -12,12 +12,14 @@ export const CATEGORIES = [
         title: "Harinas integrales",
         img: "dfg",
         color: COLORS.secondary,
-    },  {
+    },  
+    {
         id: "3",
         title: "Harinas Saborizados",
         img: "dfg",
         color: COLORS.tertiary,
-    },  {
+    },  
+    {
         id: "4",
         title: "Otros productos de panaderia",
         img: "dfg",

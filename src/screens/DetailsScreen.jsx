@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
 import React from 'react'
 
 const DetailsScreen = ({navigation, route}) => {
@@ -7,8 +7,9 @@ const DetailsScreen = ({navigation, route}) => {
         console.log(route.params)
     },[])
   return (
-    <View>
-      <Text>DetailsScreen</Text>
+    <View style={styles.container}>
+      <Text>{route.params.name}</Text>
+      <Button title="Go to categories" onPress={() => navigation.popToTop("Categories")} />
     </View>
   )
 }

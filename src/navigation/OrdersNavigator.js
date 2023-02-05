@@ -15,8 +15,8 @@ export default CartNavigator = () => {
     }}
     >
     <Stack.Screen
-          name="Categories"
-          component={CategoriesScreen}
+          name="Orders"
+          component={OrdersScreen}
           options={{
             title: "Ordenes",
           }}

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, View, FlatList} from 'react-native'
 import React from 'react'
 
 const ProductsScreen = ({navigation, route}) => {
@@ -19,11 +19,12 @@ const ProductsScreen = ({navigation, route}) => {
         onSelected = {handleSelectedProduct}/>
     )
   return (
-    <Flatlist
+    <FlatList
     data={newProducts}
     renderItem={renderProductItem}
     keyExtractor={item => item.id}
-    numColumns={2}/>
+    numColumns={2}
+    />
   )
 }
 
