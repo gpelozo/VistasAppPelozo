@@ -4,10 +4,10 @@
     "slug": "VistasAppPelozo",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/favicon.jpeg",
+    "icon": "src/assets/images/favicon.jpeg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/images/favicon.jpeg",
+      "image": "src/assets/images/favicon.jpeg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
         },
@@ -22,7 +22,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.jpeg",
+        "foregroundImage": "src/assets/images/adaptive-icon.jpeg",
         "backgroundColor": "#FFFFFF"
       }
     },

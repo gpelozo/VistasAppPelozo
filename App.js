@@ -4,7 +4,7 @@ import BottomTabNavigator from "./src/navigation/BottomTabNavigator"
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    DancingScript: require("./assets/fonts/DancingScript-Regular.ttf"),
+    //DancingScript: require("./assets/fonts/DancingScript-Regular.ttf"),
   })
 
   if (!fontsLoaded) {
@@ -14,7 +14,6 @@ export default function App() {
   return ( 
   <NavigationContainer>
     <BottomTabNavigator/>
-  </NavigationContainer>)
-  
-  
+  </NavigationContainer>
+  )
 }

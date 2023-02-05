@@ -9,7 +9,7 @@ const ProductsScreen = ({navigation, route}) => {
         product => product.category === route.params.categoryId
     )
 
-    const handleSelectedProduct = () => {
+    const handleSelectedProduct = item => {
         navigation.navigate("Details", {
             name: item.name,
         })

@@ -18,7 +18,7 @@ export default CartNavigator = () => {
           name="Cart"
           component={CartScreen}
           options={{
-            title: "Carrito"
+            title: "Calculadora"
           }}
           />
     </Stack.Navigator>

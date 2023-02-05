@@ -1,11 +1,11 @@
-import { StyleSheet, View, Text, Button } from 'react-native'
-import React from 'react'
+import { StyleSheet, View, Text, Button } from "react-native"
+import React from "react"
+import DetailsItem from "../components/DetailsItem"
 
 const DetailsScreen = ({navigation, route}) => {
-
-    useEffect(() => {
-        console.log(route.params)
-    },[])
+  const renderDetailsItem = ({item}) => (
+    <DetailsItem/>
+  )
   return (
     <View style={styles.container}>
       <Text>{route.params.name}</Text>

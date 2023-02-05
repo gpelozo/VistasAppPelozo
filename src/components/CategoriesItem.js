@@ -11,13 +11,13 @@ const CategoriesItem = ({ item, onSelected }) => {
         onPress={() => onSelected(item)}
       >
         <View style={styles.textContainer}>
-          <Text>{item.title}</Text>
+          <Text style={styles.text}>{item.title}</Text>
         </View>
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
             source={{
-              uri: item.img
+              uri: item.img,
             }}
           />
         </View>
@@ -53,14 +53,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  text: {
+    color: "white",
+    },
   imageContainer: {
     width: "40%",
     height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "blue",
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
   },
   image: {
     width: "100%",
     height: "100%",
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
+    backgroundColor: "red"
   },
 })
