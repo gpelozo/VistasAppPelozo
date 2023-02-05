@@ -10,15 +10,15 @@ export default CartNavigator = () => {
     screenOptions={{
       headerShadowVisible: false,
       headerTitleStyle: {
-        fontWeight: "bold",
-      },
+        fontWeight: "bold"
+      }
     }}
     >
     <Stack.Screen
           name="Cart"
           component={CartScreen}
           options={{
-            title: "Carrito",
+            title: "Carrito"
           }}
           />
     </Stack.Navigator>

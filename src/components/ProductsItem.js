@@ -1,5 +1,5 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import React from "react"
 
 const ProductsItem = ({ item, onSelected }) => {
   return (
@@ -11,7 +11,7 @@ const ProductsItem = ({ item, onSelected }) => {
         <Image
           style={styles.image}
           source={{
-            uri: "https://reactnative.dev/img/tiny_logo.png",
+            uri: "https://reactnative.dev/img/tiny_logo.png"
           }}
         />
       </View>

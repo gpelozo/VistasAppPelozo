@@ -11,7 +11,10 @@ export default function App() {
     return null
   }
 
-  return <NavigationContainer><BottomTabNavigator/></NavigationContainer>
+  return ( 
+  <NavigationContainer>
+    <BottomTabNavigator/>
+  </NavigationContainer>)
   
   
 }

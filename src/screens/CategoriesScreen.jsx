@@ -15,7 +15,7 @@ const CategoriesScreen = ({navigation}) => {
   }
   const renderCategoriesItem = ({ item }) => (
     <View style={styles.categoriesContainer}>
-      <CategoriesItem item={item} onSelected={handleSelectedCategory}/>)
+      <CategoriesItem item={item} onSelected={handleSelectedCategory}/>
     </View>
   )
   return (

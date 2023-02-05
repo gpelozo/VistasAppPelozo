@@ -2,8 +2,8 @@ import { StyleSheet,View, Text } from "react-native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import Ionicons from "@expo/vector-icons/Ionicons"
 
-import ShopNavigator from "./ShopNavigator";
-import CartNavigator from "./CartNavigator";
+import ShopNavigator from "./ShopNavigator"
+import CartNavigator from "./CartNavigator"
 import OrdersNavigator from "./OrdersNavigator"
 
 const BottomTabs = createBottomTabNavigator()
@@ -25,7 +25,7 @@ export default BottomTabNavigator = () => {
                         <Ionicons name="home" size={20} color="black" />
                         <Text>Tienda</Text>
                     </View>
-                ),
+                )
             }}
             />
             <BottomTabs.Screen name="CartTab" component={CartNavigator}
@@ -35,7 +35,7 @@ export default BottomTabNavigator = () => {
                         <Ionicons name="cart" size={20} color="black" />
                         <Text>Carrito</Text>
                     </View>
-                ),
+                )
             }}
             />
             <BottomTabs.Screen name="OrdersTab" component={OrdersNavigator}
@@ -45,7 +45,7 @@ export default BottomTabNavigator = () => {
                         <Ionicons name="list" size={20} color="black" />
                         <Text>Ordenes</Text>
                     </View>
-                ),
+                )
             }}
             />
         </BottomTabs.Navigator>
@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
         height: 90,
     },
     icon: {
-        flex:"1",
-        justifyContent:"center",
-    }
+        flex: "1",
+        justifyContent: "center",
+        alignItems: "center",
+    },
 })

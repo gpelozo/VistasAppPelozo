@@ -17,7 +17,7 @@ const CategoriesItem = ({ item, onSelected }) => {
           <Image
             style={styles.image}
             source={{
-              uri: item.img,
+              uri: item.img
             }}
           />
         </View>

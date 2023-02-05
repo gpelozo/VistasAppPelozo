@@ -1,5 +1,7 @@
-import { Button, StyleSheet, Text, View, FlatList} from 'react-native'
-import React from 'react'
+import { StyleSheet, FlatList} from "react-native"
+import React from "react"
+import ProductsItem from "../components/ProductsItem"
+import { PRODUCTS } from "../data/products"
 
 const ProductsScreen = ({navigation, route}) => {
 
