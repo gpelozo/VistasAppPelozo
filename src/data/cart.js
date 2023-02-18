@@ -1,14 +1,20 @@
-import { StyleSheet, Text, View } from "react-native"
-import React from "react"
-
-const cart = () => {
-  return (
-    <View>
-      <Text>cart</Text>
-    </View>
-  )
-}
-
-export default cart
-
-const styles = StyleSheet.create({})
+export const CART = [
+  {
+    id:"1",
+    category:"1",
+    name:"Pan Baguette",
+    description:"Clasico pan frances",
+    weight:"350gr",
+    price:"16",
+    quantity: 3,
+  },
+  {
+    id:"2",
+    category:"2",
+    name:"Pan Ciabatta Blanco",
+    description:"blahblabhlab",
+    weight:"800gr",
+    price:"30",
+    quantity: 2,
+  },
+]
