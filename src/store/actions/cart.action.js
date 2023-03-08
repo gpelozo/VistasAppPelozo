@@ -15,9 +15,9 @@ export const removeItem = (itemId) => ({
 })
 
 export const confirmCart = (payload, total) => {
-    return async (dispatch) => {
+    return async dispatch => {
         try {
-            const response = await fetch(`${URL_API}.ordenes.json`, {
+            const response = await fetch(`${URL_API}/ordenes.json`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export const confirmCart = (payload, total) => {
                     }),
             })
             const result = await response.json()
-            console.log(response)
+            console.log(result)
             dispatch({
                 type: CONFIRM_CART,
                 confirm: true,

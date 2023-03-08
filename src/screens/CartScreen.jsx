@@ -15,6 +15,7 @@ const CartScreen = () => {
         }
 
         const handleDeleteItem = id => {
+            console.log("borrar elemento")
            dispatch(removeItem(id))
         }
 
@@ -32,11 +33,11 @@ const CartScreen = () => {
       />
       </View>
     <View style={styles.footer}>
-        <TouchableOpacity styles={styles.confirm} onPress={handleConfirmCart}>
+        <TouchableOpacity style={styles.confirm} onPress={handleConfirmCart}>
             <Text>Confirmar</Text>
             <View style={styles.total}>
-            <Text styles={styles.text}>Total</Text>
-            <Text>${total}</Text>
+                <Text style={styles.text}>Total</Text>
+                <Text style={styles.text}>${total}</Text>
             </View>
         </TouchableOpacity>
     </View>
@@ -50,6 +51,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 12, 
+        backgroundColor: "#fff",
         paddingBottom: 120,
     },
     list: {
@@ -73,6 +75,6 @@ const styles = StyleSheet.create({
         padding: 8,
     },
     total: {
-flexDirection: "row",
+    flexDirection: "row",
     },
 })

@@ -13,7 +13,7 @@ const CartItem = ({item, onDelete}) => {
                 <Text>Cantidad: {item.quantity}</Text>
                 <Text>${item.price}</Text>
             </View>
-            <TouchableOpacity onpress={() => onDelete()}>
+            <TouchableOpacity onPress={() => onDelete(item.id)}>
                 <Ionicons name="trash" size={24} color="red" />
             </TouchableOpacity>
         </View>
@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
     },
 })
