@@ -5,12 +5,14 @@ import CategoryReducer from "./reducers/category.reducer"
 import ProductReducer from "./reducers/products.reducer"
 import CartReducer from "./reducers/cart.reducer"
 import OrderReducer from "./reducers/order.reducer"
+import AuthReducer from "./reducers/auth.reducer"
 
 const rootReducer = combineReducers({
     categories: CategoryReducer,
     products: ProductReducer,
     cart: CartReducer,
     orders: OrderReducer,
+    auth: AuthReducer,
 });
 
 export default createStore(rootReducer, applyMiddleware(thunk));
