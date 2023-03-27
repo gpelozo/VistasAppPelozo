@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, KeyboardAvoidingView, TouchableOpacity, Button, TextInput, Alert } from 'react-native'
+import { StyleSheet, Text, View, KeyboardAvoidingView, Button, Alert } from 'react-native'
 import React, { useState, useEffect, useReducer, useCallback } from 'react'
 
 import { COLORS } from '../constants/colors' 
@@ -21,7 +21,7 @@ const formReducer = (state, action) => {
         }
         let updatedFormIsValid = true
         for (const key in updatedValidities) {
-            updatedFormIsValid = updatedFormisValid && updatedValidities[key]
+            updatedFormIsValid = updatedFormIsValid && updatedValidities[key]
         }
         return {
             inputValues: updatedValues,
@@ -49,11 +49,11 @@ const AuthScreen = () => {
             email: "",
             password: "",
         },
-        inputValidites: {
+        inputValidities: {
             email: false,
             password: false,
         },
-        formIsValid: false,
+        formIsValid: false
     })
 
     const handleSignUp = () => {
@@ -88,6 +88,7 @@ const AuthScreen = () => {
             id="email" 
             label="Email" 
             keyboardType="email-address" 
+            placeholder="Ingrese correo electronico" 
             required 
             email 
             autoCapitalize="none" 
@@ -98,7 +99,8 @@ const AuthScreen = () => {
             <Input 
             id="password" 
             label="password" 
-            keyboardType="default" 
+            keyboardType="default"
+            placeholder="Ingrese contraseña" 
             required 
             password 
             secureTextEntry 
