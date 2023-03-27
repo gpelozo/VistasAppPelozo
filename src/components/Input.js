@@ -27,6 +27,7 @@ const Input = ({onInputChange, initialValue, initialValid}) => {
     isValid: initialValid,
     touched: false
   })
+  
 
   useEffect(() =>{
     if(inputState.touched) {
@@ -51,12 +52,12 @@ const Input = ({onInputChange, initialValue, initialValid}) => {
     }
 
     const onBlurHandler = () => {
-      dispatch({mtype: INPUT_BLUR })
+      dispatch({type: INPUT_BLUR })
     }
 
   return (
     <View style={styles.formControl}>
-      <Text style={styles.label}>{label}</Text>
+      <Text style={styles.label}>{props.label}</Text>
       <TextInput style={styles.input} value={inputState.value} onChangeText={textChangeHandler} onBlur={onBlurHandler} {...props} />
       {!inputState.isValid && inputState.touched &&(
         <View style={styles.errorContainer}>

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, KeyboardAvoidingView, TouchableOpacity, Button, TextInput, Alert } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState, useEffect, useReducer, useCallback } from 'react'
 
 import { COLORS } from '../constants/colors' 
 import { useDispatch } from 'react-redux'
@@ -13,17 +13,23 @@ const formReducer = (state, action) => {
     if(action.type === FORM_INPUT_UPDATE) {
         const updatedValues = {
             ...state.inputValues,
-            [action.input]: action.value
+            [action.input]: action.value,
         }
         const updatedValidities = {
             ...state.inputValidities,
             [action.input]: action.isValid,
         }
-        let updatedFormisValid = true
+        let updatedFormIsValid = true
         for (const key in updatedValidities) {
             updatedFormIsValid = updatedFormisValid && updatedValidities[key]
         }
+        return {
+            inputValues: updatedValues,
+            inputValidities: updatedValidities,
+            formIsValid: updatedFormIsValid,
+        }
     }
+    return state
 }
 
 const AuthScreen = () => {
@@ -54,7 +60,7 @@ const AuthScreen = () => {
         if (formState.formIsValid) {
             dispatch(signup(formState.inputValues.email, formState.inputValues.password))
         } else {
-            Alert.alert("Formulario invalido", "Infresa email y password valido", [
+            Alert.alert("Formulario invalido", "Ingresa email y password valido", [
                 {text: "OK"},
             ])
         }
@@ -78,15 +84,30 @@ const AuthScreen = () => {
     <KeyboardAvoidingView behavior="height" style={styles.screen}>
         <View style={styles.container}>
             <Text style={styles.title}>Registro</Text>
-            <Input id='email' label="Email" keyboardType="email-address" required email autoCapitalize="none" errorText="Por favor ingresa un email valido" onInputChange={onInputChangeHandler} initialValue="" />
-            <Input id="password" label="password" keyboardType="default" required password secureTextEntry autoCapitalize="none" errorText="Por favor ingresa una contrasena valida" onInputChange={onInputChangeHandler} initialValue="" />
+            <Input 
+            id="email" 
+            label="Email" 
+            keyboardType="email-address" 
+            required 
+            email 
+            autoCapitalize="none" 
+            errorText="Por favor ingresa un email valido" 
+            onInputChange={onInputChangeHandler} 
+            initialValue=""
+            />
+            <Input 
+            id="password" 
+            label="password" 
+            keyboardType="default" 
+            required 
+            password 
+            secureTextEntry 
+            autoCapitalize="none" 
+            errorText="Por favor ingresa una contrasena valida" 
+            onInputChange={onInputChangeHandler} 
+            initialValue="" 
+            />
             <Button title="Registrarme" onPress={handleSignUp}/>
-            {/*<View style={styles.prompt}>
-                <Text style={styles.promptMessage}>Ya tienes una cuenta?</Text>
-                <TouchableOpacity onPress={() => console.log("Ingresar")} style={styles.button}>
-                    <Text style={styles.promptButton}>Ingresar</Text>
-                </TouchableOpacity>
-            </View> */}
         </View>
     </KeyboardAvoidingView>
     
@@ -100,6 +121,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "grey",
     },
     title: {
         fontSize: 24,
